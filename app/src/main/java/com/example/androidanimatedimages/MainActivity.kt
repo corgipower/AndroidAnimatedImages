@@ -1,7 +1,7 @@
 package com.example.androidanimatedimages
 
 import android.annotation.SuppressLint
-import android.graphics.drawable.AnimationDrawable
+import android.graphics.drawable.Animatable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -22,9 +22,14 @@ class MainActivity : AppCompatActivity() {
         }
         */
 
+        /*
         val frameDrawable = ContextCompat.getDrawable(this, R.drawable.hammie_animated)
         anim_cat.setImageDrawable(frameDrawable)
         (frameDrawable as AnimationDrawable).start()
+        */
 
+        val animatedVectorDrawable = ContextCompat.getDrawable(this, R.drawable.play_to_pause)
+        anim_cat.setImageDrawable(animatedVectorDrawable)
+        (animatedVectorDrawable as Animatable).start()
     }
 }
